@@ -6,6 +6,7 @@ namespace Labb3Fullstack.Data
     public class PortfolioDbContext : DbContext
     {
         public PortfolioDbContext(DbContextOptions<PortfolioDbContext> options) : base(options){ }
-        public DbSet<Portfolio> Portfolios { get; set; }
+        public DbSet<Skill> Skills { get; set; }
+        public DbSet<Project> Projects { get; set; }
     }
 }
