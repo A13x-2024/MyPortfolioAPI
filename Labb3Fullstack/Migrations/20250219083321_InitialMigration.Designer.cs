@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Labb3Fullstack.Migrations
 {
     [DbContext(typeof(PortfolioDbContext))]
-    [Migration("20250217184135_InitialMigration")]
+    [Migration("20250219083321_InitialMigration")]
     partial class InitialMigration
     {
         /// <inheritdoc />
@@ -40,8 +40,8 @@ namespace Labb3Fullstack.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("YearsOfExperiance")
-                        .HasColumnType("int");
+                    b.Property<double>("YearsOfExperience")
+                        .HasColumnType("float");
 
                     b.HasKey("Id");
 

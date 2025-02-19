@@ -37,8 +37,8 @@ namespace Labb3Fullstack.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("YearsOfExperiance")
-                        .HasColumnType("int");
+                    b.Property<double>("YearsOfExperience")
+                        .HasColumnType("float");
 
                     b.HasKey("Id");
 

@@ -29,7 +29,7 @@ namespace Labb3Fullstack.Data
             var updateportfolio = await _db.Portfolios.FirstOrDefaultAsync(x => x.Id == id);
             if (updateportfolio == null) return null;
             updateportfolio.Technology = updatedPortfolio.Technology;
-            updateportfolio.YearsOfExperiance = updatedPortfolio.YearsOfExperiance;
+            updateportfolio.YearsOfExperience = updatedPortfolio.YearsOfExperience;
             updateportfolio.Skillgrade = updatedPortfolio.Skillgrade;
             await _db.SaveChangesAsync();
             return updateportfolio;

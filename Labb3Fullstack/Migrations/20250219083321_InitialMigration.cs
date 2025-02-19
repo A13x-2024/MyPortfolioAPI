@@ -17,7 +17,7 @@ namespace Labb3Fullstack.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Technology = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    YearsOfExperiance = table.Column<int>(type: "int", nullable: false),
+                    YearsOfExperience = table.Column<double>(type: "float", nullable: false),
                     Skillgrade = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
