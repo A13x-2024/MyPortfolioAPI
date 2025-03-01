@@ -38,7 +38,6 @@ namespace Labb3Fullstack.Data
             skill.SkillLevel = updatedSkill.SkillLevel;
             await _db.SaveChangesAsync();
             return skill;
-
         }
 
         public async Task<Skill> DeleteSkill(int id)

@@ -33,11 +33,10 @@ namespace Labb3Fullstack.Data
         {
             var project = await _db.Projects.FirstOrDefaultAsync(x => x.Id == id);
             if (project == null) return null;
-            project.Name = project.Name;
-            project.Description = project.Description;
+            project.Name = updatedProject.Name;
+            project.Description = updatedProject.Description;
             await _db.SaveChangesAsync();
             return project;
-
         }
 
         public async Task<Project> DeleteProject(int id)

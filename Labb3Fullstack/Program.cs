@@ -116,7 +116,10 @@ namespace Labb3Fullstack
             app.MapPut("/project/{id}", async (int id, Project project, ProjectService service) =>
             {
                 var updatedProject = await service.UpdateProject(id, project);
-                return updatedProject != null ? Results.Ok(updatedProject) : Results.NotFound("Project not found");
+                if (updatedProject == null)
+                    return Results.NotFound("Project not found");
+
+                return Results.Ok(updatedProject);
             });
 
             app.MapDelete("/project/{id}", async (int id, ProjectService service) =>
